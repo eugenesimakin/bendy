@@ -79,9 +79,9 @@ where
                 self.state.push(MapValue(S::from(label)));
             },
             (Some(MapKey(Some(oldlabel))), String(label)) => {
-                if oldlabel.as_ref() >= label {
-                    return self.latch_err(Err(E::from(StructureError::UnsortedKeys)));
-                }
+                // if oldlabel.as_ref() >= label {
+                //     return self.latch_err(Err(E::from(StructureError::UnsortedKeys)));
+                // }
                 self.state.push(MapValue(S::from(label)));
             },
             (Some(oldstate @ MapKey(_)), _tok) => {

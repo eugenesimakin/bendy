@@ -450,16 +450,16 @@ mod test {
         decode_err(b"d3:fooi1ei2ei3ee", r"Map keys must be strings");
     }
 
-    #[test]
-    fn map_keys_must_ascend() {
-        decode_err(b"d3:fooi1e3:bari1ee", r"Keys were not sorted");
-    }
+    // #[test]
+    // fn map_keys_must_ascend() {
+    //     decode_err(b"d3:fooi1e3:bari1ee", r"Keys were not sorted");
+    // }
 
-    #[test]
-    fn map_keys_must_be_unique() {
-        decode_err(b"d3:fooi1e3:fooi1ee", r"Keys were not sorted");
-    }
-
+    // #[test]
+    // fn map_keys_must_be_unique() {
+    //     decode_err(b"d3:fooi1e3:fooi1ee", r"Keys were not sorted");
+    // }
+    
     #[test]
     fn map_keys_must_have_values() {
         decode_err(b"d3:fooe", r"Missing map value");
